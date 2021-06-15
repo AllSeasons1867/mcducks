@@ -17,6 +17,11 @@ function showLocation(position) {
 
     document.getElementById("geodisplay").innerHTML = "Latitude: " + currentpositionlat + "<br>Longitude: " + currentpositionlon
 
+    if (distance < 100.5) {
+        document.getElementById("effect").innerHTML="<img src='https://lh3.googleusercontent.com/_dcFYf-oqmTl90vv5pzmpo1dgaHMdCtjxi9-5jCLbSFG9kFa-HjwkrkHm4nV18QRnYdN'>";
+    } else {
+        alert("Thanks for checking in!")
+    }
 }
 
 function getDistanceFromLatLonInMiles(lat1, lon1, lat2, lon2) {
